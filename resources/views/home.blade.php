@@ -13,10 +13,21 @@
                     <div class="pr-5"><strong>250k</strong> follower</div>
                     <div class="pr-5"><strong>150</strong> following</div>
                 </div>
-                <div class="pt-5 font-weight-bold">Dotsocial.org</div>
+                <div class="pt-4 font-weight-bold">Dotsocial.org</div>
                 <div>We are the best you need for a lifetime......oh yes......you heard it right</div>
                 <div><a href="#">DotSocial.com</a></div>
             </div>
         </div>
+</div>
+<div class="row pt-5">
+    <div class="col-4">
+        <img src="/img/bannerArtboard 2Design .jpg" width="250" height="250" class="w-100">
+    </div>
+    <div class="col-4">
+        <img src="/img/carlos-muza-hpjSkU2UYSU-unsplash.jpg" width="250" height="250" class="w-100">
+    </div>
+    <div class="col-4">
+        <img src="/img/download (2).jpg" width="250" height="250" class="w-100">
+    </div>
 </div>
 @endsection
