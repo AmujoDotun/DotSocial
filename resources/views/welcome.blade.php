@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    DotSocial
                 </div>
 
                 <div class="links">
@@ -98,3 +98,4 @@
         </div>
     </body>
 </html>
+git r
