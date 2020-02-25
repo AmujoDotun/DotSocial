@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace DotSocial\Http\Middleware;
 
 use Fideloper\Proxy\TrustProxies as Middleware;
 use Illuminate\Http\Request;

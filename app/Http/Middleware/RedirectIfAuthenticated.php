@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace DotSocial\Http\Middleware;
 
-use App\Providers\RouteServiceProvider;
+use DotSocial\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
