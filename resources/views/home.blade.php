@@ -7,7 +7,11 @@
          <img src="/img/slack-customer-rmit.jpg" width="100" height="100" class="rounded-circle">
     </div> 
         <div class="col-9 pt-5">
-            <div><h1>{{$user -> username}}</h1></div>
+            <div class="d-flex justify-content-between align-item-baseline">
+
+            <h1>{{$user -> username}}</h1>
+            <a href="#"> Add New Post</a>
+            </div>
                 <div class="d-flex">
                     <div class="pr-5"><strong>150</strong> post</div>
                     <div class="pr-5"><strong>250k</strong> follower</div>
