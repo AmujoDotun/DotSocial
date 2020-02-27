@@ -31,10 +31,8 @@
 
 
                  @error('image')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
+                        <strong>{{ $message }}</strong>
+                @enderror
                 </div>
                 <div class="row pt-4">
                     <button type="submit" class="btn btn-primary">Add new Post</button>
