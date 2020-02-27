@@ -10,10 +10,10 @@
             <div class="d-flex justify-content-between align-items-baseline">
 
             <h1>{{$user -> username}}</h1>
-            <a href="#"> Add New Post</a>
+            <a href="/p/create"> Add New Post</a>
             </div>
                 <div class="d-flex">
-                    <div class="pr-5"><strong>150</strong> post</div>
+                    <div class="pr-5"><strong>{{ $user->posts->count() }}</strong> post</div>
                     <div class="pr-5"><strong>250k</strong> follower</div>
                     <div class="pr-5"><strong>150</strong> following</div>
                 </div>
@@ -24,14 +24,13 @@
         </div>
 </div>
 <div class="row pt-5">
-    <div class="col-4">
-        <img src="/img/bannerArtboard 2Design .jpg" width="250" height="250" class="w-100">
+
+    @foreach($user->posts as $post)
+    <div class="col-4 pb-4 ">
+        <img src="/storage/{{ $post-> image}}" width="250" height="250" class="w-100 rounded-squre">
     </div>
-    <div class="col-4">
-        <img src="/img/carlos-muza-hpjSkU2UYSU-unsplash.jpg" width="250" height="250" class="w-100">
-    </div>
-    <div class="col-4">
-        <img src="/img/download (2).jpg" width="250" height="250" class="w-100">
+    @endforeach
+    
     </div>
 </div>
 @endsection
