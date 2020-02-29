@@ -23,8 +23,10 @@ class PostsController extends Controller
             'image'=> ['required', 'image']
         ]);
 
+        //image path where the iage is saved
         $imgPath = request('image')->store('uploads', 'public');
 
+        //this is to help resize all the image to the same size using the image invention class
         $image = Image::make(public_path("storage/{$imgPath}"))->fit(1200, 1200);
         
         $image->save();
