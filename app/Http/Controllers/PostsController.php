@@ -3,6 +3,7 @@
 namespace DotSocial\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Intervention\Image\facades\Image;
 
 class PostsController extends Controller
 {
@@ -24,6 +25,9 @@ class PostsController extends Controller
 
         $imgPath = request('image')->store('uploads', 'public');
 
+        $image = Image::make(public_path("storage/{$imgPath}"))->fit(1200, 1200);
+        
+        $image->save();
 
         auth()->user()->posts()->create([
             'caption' => $data['caption'],
