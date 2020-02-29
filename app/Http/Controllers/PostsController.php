@@ -38,6 +38,10 @@ class PostsController extends Controller
 
         return redirect('/profile/' . auth()->user()->id );
 
-        dd(request()->all());
+        // dd(request()->all());
+    }
+
+    public function show(\App\Model $post){
+        return view('posts.show')->compact('post');
     }
 }
