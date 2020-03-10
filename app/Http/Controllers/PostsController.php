@@ -5,6 +5,10 @@ namespace DotSocial\Http\Controllers;
 use Illuminate\Http\Request;
 use Intervention\Image\facades\Image;
 
+//note the namespace has change from App to DotSocial 
+// use App\Post;
+use DotSocial\Post;
+
 class PostsController extends Controller
 {
 
@@ -41,7 +45,8 @@ class PostsController extends Controller
         // dd(request()->all());
     }
 
-    public function show(\App\Model $post){
-        return view('posts.show')->compact('post');
+    public function show(\DotSocial\Post $post){
+        return view('posts.show', compact('post'));
+        // dd($post);
     }
 }

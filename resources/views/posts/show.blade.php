@@ -2,6 +2,6 @@
 
 @section('content')
 <div class="contianer">
-   <img src="/storage/{{ $post -> image}}" alt="">
+   <img src="/storage/{{ $post -> image}}" alt="" class="w-100">
 </div>
 @endsection
