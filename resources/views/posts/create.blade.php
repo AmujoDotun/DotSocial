@@ -11,7 +11,7 @@
             </div>
                 <label for="caption" class="col-md-4 col-form-label">Post Caption</label>
 
-                <div class="col-md-6">
+                <div class="col-md-6 pl-2">
                     <input id="caption" 
                     type="text" class="form-control @error('caption') 
                     is-invalid @enderror" 
@@ -25,7 +25,7 @@
                         </span>
                     @enderror
                 </div>
-                <div class="row">
+                <div class="row pl-4">
                  <label for="image" class="col-md-4 col-form-label">Post Image</label>
                  <input type="file" name="image" id="image" class="form-control-file" >
 
@@ -34,7 +34,7 @@
                         <strong>{{ $message }}</strong>
                 @enderror
                 </div>
-                <div class="row pt-4">
+                <div class="row pt-4 pl-4">
                     <button type="submit" class="btn btn-primary">Add new Post</button>
                 </div>
         </div>

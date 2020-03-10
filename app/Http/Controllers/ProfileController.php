@@ -30,7 +30,7 @@ class ProfileController extends Controller
     public function update(User $user){
         //to authorize only a user to update their profile credentials
         $this->authorize('update', $user->profile);
-        
+
         $data = request()->validate([
             'title' =>'required',
             'description' => 'required',
