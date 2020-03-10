@@ -20,6 +20,10 @@ class ProfileController extends Controller
     }
 
     public function edit(User $user){
+
+        //to authorize only a user to update their profile credentials
+        $this->authorize('update', $user->profile);
+        
         return view('profiles.edit', compact('user'));
     }
 
