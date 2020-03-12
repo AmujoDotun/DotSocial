@@ -37,6 +37,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    //this function is going to perform a task afte a user account is created which is to have a profile dashboard
+    protected static function boot(){
+        parent::boot();
+
+        static::created( function ($user){
+            $user->profile()->create([
+                'title'=>$user->username,
+            ]);
+        });
+    }
+
     public function posts(){
         return $this->hasMany(Post::class)->orderBy('created_at', 'DESC');
     }
