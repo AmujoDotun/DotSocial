@@ -51,7 +51,7 @@ class ProfileController extends Controller
 
         auth()->user()->profile->update(array_merge(
             $data,
-            ['image' => $imagePath] //this will overide the image in the $data request
+            ['image' => $imgPath] //this will overide the image in the $data request
         ));
 
         return redirect("/profile/{$user->id}");
