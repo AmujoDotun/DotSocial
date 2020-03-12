@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-         <img src="/img/slack-customer-rmit.jpg" width="100" height="100" class="rounded-circle">
+         <img src="/storage/{{$user->profile->image}}" class="rounded-circle w-100">
     </div> 
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
