@@ -47,7 +47,9 @@ class ProfileController extends Controller
         $image = Image::make(public_path("storage/{$imgPath}"))->fit(1000, 1000);
         
         $image->save();
-        $imageArray = ['image' => $imgPath]
+
+        $imageArray = ['image' => $imgPath];
+
         }
 
         auth()->user()->profile->update(array_merge(
@@ -55,7 +57,7 @@ class ProfileController extends Controller
             $data,
             //IF A new user is to update their profile but are not yet 
             //ready to change the default profile image this array handle it
-            $imageArray ?? [] ; //this will overide the image in the $data request
+            $imageArray ?? [], //this will overide the image in the $data request
         ));
 
         return redirect("/profile/{$user->id}");
